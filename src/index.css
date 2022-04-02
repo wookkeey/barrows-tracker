@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-family: 'Kingthings Petrock';
+  --events-c-text-outline: rgba(0, 0, 0, 0.75);
+}
+
+@font-face {
+  font-family: 'Kingthings Petrock';
+  font-weight: normal;
+  font-display: swap;
+  src: local('Kingthings Petrock'),
+    url('./assets/fonts/Kingthings_Petrock-webfont.woff') format('woff');
+}
+
+.text-kingthings {
+  font-family: var(--font-family), Georgia, serif;
+}
+
+.text-outline-1 {
+  text-shadow: -1px -1px 0 var(--events-c-text-outline), 1px -1px 0 var(--events-c-text-outline),
+    -1px 1px 0 var(--events-c-text-outline), 1px 1px 0 var(--events-c-text-outline);
+}
+
+.text-outline-2 {
+  text-shadow: -2px -2px 0 var(--events-c-text-outline), 2px -2px 0 var(--events-c-text-outline),
+    -2px 2px 0 var(--events-c-text-outline), 2px 2px 0 var(--events-c-text-outline);
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 1px var(--events-c-text-outline);
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
