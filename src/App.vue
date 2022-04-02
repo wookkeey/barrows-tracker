@@ -8,7 +8,7 @@ import BarrowsSets from '@/components/BarrowsSets.vue';
 
 <template>
   <AppHeader></AppHeader>
-  <main class="mx-auto my-6">
+  <main class="mx-auto p-3 sm:p-6">
     <BarrowsSets></BarrowsSets>
   </main>
 </template>
@@ -18,6 +18,8 @@ import BarrowsSets from '@/components/BarrowsSets.vue';
   scoped
 >
 main {
-  width: 20rem;
+  min-width: 20rem;
+  max-width: 40rem;
+  width: 100%;
 }
 </style>

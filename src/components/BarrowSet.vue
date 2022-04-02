@@ -1,13 +1,15 @@
 <template>
-  <section class="flex flex-col py-8">
-    <header class="flex justify-between items-center mb-4">
-      <h2 class="text-kingthings text-outline-1 text-2xl">{{ name }}</h2>
-      <small
-        class="font-mono text-xs inline-block"
+  <section class="flex flex-col p-3 sm:p-6">
+    <header class="flex justify-between items-center mb-6">
+      <h2 class="text-kingthings text-outline-1 text-2xl">
+        {{ name }}
+      </h2>
+      <span
+        class="font-mono text-sm inline-block py-1 px-2 rounded text-zinc-900 font-bold self-start"
         :class="completionStatus"
       >
         {{ progress }}%
-      </small>
+      </span>
     </header>
     <div class="flex justify-around">
       <div
@@ -82,13 +84,13 @@ export default defineComponent({
     completionStatus() {
       switch (this.progress) {
         case 0:
-          return 'text-red-500';
+          return 'bg-red-500';
 
         case 100:
-          return 'text-green-500';
+          return 'bg-green-500';
 
         default:
-          return 'text-yellow-500';
+          return 'bg-yellow-500';
       }
     },
   },
@@ -104,3 +106,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.text-kingthings {
+  line-height: 1;
+}
+</style>

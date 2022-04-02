@@ -6,7 +6,7 @@ import BarrowSet from './BarrowSet.vue';
 </script>
 
 <template>
-  <div class="m-2 divide-y divide-zinc-800">
+  <div class="grid grid-cols-2">
     <BarrowSet
       v-for="brother in brothers"
       :key="brother"
@@ -30,3 +30,21 @@ export default defineComponent({
   },
 });
 </script>
+
+<style
+  lang="postcss"
+  scoped
+>
+.grid > section {
+  border-bottom: 1px solid theme('colors.zinc.800');
+}
+
+.grid > section:nth-child(2n) {
+  border-left: 1px solid theme('colors.zinc.800');
+}
+
+.grid > section:nth-child(5),
+.grid > section:nth-child(6) {
+  border-bottom: 0;
+}
+</style>
