@@ -21,16 +21,23 @@
           class="inline-block"
         />
         <svg
-          v-if="isObtained(item)"
           xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 text-green-500 absolute -top-1.5 -right-1.5 opacity-90"
+          class="h-4 w-4 absolute -top-1.5 -right-1.5 opacity-90"
           viewBox="0 0 20 20"
           fill="currentColor"
+          :class="isObtained(item) ? 'text-green-500' : 'text-red-500'"
         >
           <path
             fill-rule="evenodd"
             d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
             clip-rule="evenodd"
+            v-if="isObtained(item)"
+          />
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+            clip-rule="evenodd"
+            v-else
           />
         </svg>
       </div>
@@ -90,7 +97,9 @@ export default defineComponent({
       return require(`@/assets/${this.$props.brother}/${item}.png`);
     },
     isObtained(item: string) {
-      return this.$props.obtainedItems[this.$props.brother].includes(item);
+      const { brother, obtainedItems } = this.$props;
+
+      return obtainedItems[brother].includes(item);
     },
   },
 });
