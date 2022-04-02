@@ -13,12 +13,26 @@
       <div
         v-for="item in equipmentPieces"
         :key="item"
+        class="relative"
       >
         <img
           :src="`/images/${brother}/${item}.png`"
+          :class="`opacity-${isObtained(item) ? '10' : '8'}0`"
           class="inline-block"
-          :class="isObtained(item) ? 'opacity-100 hue-rotate-60' : 'opacity-50'"
         />
+        <svg
+          v-if="isObtained(item)"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5 text-green-500 absolute -top-1.5 -right-1.5 opacity-90"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd"
+          />
+        </svg>
       </div>
     </div>
   </section>
