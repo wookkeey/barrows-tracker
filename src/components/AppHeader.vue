@@ -4,7 +4,7 @@
       <h1
         class="text-kingthings relative text-outline-1 px-4 z-10 bg-zinc-900 inline-block text-center text-4xl"
       >
-        Barrows Event
+        Barrows Tracker
       </h1>
     </div>
   </header>
