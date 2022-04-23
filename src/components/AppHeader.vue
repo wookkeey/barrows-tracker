@@ -7,7 +7,6 @@
         Barrows Event
       </h1>
     </div>
-    <i class="text-zinc-500">April 2nd-3rd, 2022</i>
   </header>
 </template>
 
