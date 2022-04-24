@@ -14,6 +14,6 @@ export const OBTAINED_ITEMS: ObtainedItems = {
   dharoks: ['body', 'legs'],
   guthans: ['body', 'helm'],
   karils: ['helm', 'weapon'],
-  torags: [],
+  torags: ['body'],
   veracs: ['body', 'legs'],
 };
