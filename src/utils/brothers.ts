@@ -10,10 +10,10 @@ export const BARROWS_BROTHERS: Record<BarrowsBrother, string> = {
 };
 
 export const OBTAINED_ITEMS: ObtainedItems = {
-  ahrims: ['helm', 'body'],
+  ahrims: ['helm', 'body', 'legs'],
   dharoks: ['body', 'legs'],
   guthans: ['body', 'helm'],
   karils: ['helm', 'weapon'],
-  torags: ['body'],
+  torags: ['body', 'weapon'],
   veracs: ['body', 'legs'],
 };
